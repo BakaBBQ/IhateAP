@@ -47,5 +47,3 @@ end
 
 #carrier
 gem 'carrierwave'
-
-gem 'rails_12factor', group: :production
