@@ -1,0 +1,7 @@
+<% content_for :title, "AP Comp Cheater" %>
+<div>
+<h1>Ap Computer Science</h1>
+<h3>Get your answers here</h3>
+<%= link_to "Contribute", controller: "answers", action: "new"%>
+<%= link_to "Answers", controller: "answers"%>
+</div>

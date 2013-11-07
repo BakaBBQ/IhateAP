@@ -1,0 +1,33 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Share+Tech);
+body{font-family:"Share Tech", Times, serif;
+text-align:center;
+background-image: asset-data-url("fresh_snow.png");
+
+color:#333333;
+font-size:150%;
+}
+
+p{
+
+}
+
+h1{
+font-size:200%;
+color: rgb(102, 153, 153);
+}
+
+div {
+	width: 600px;
+	height: 300px;
+
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	margin: auto;
+}

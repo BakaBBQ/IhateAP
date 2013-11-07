@@ -1,0 +1,23 @@
+<% content_for :title, "Answer: #{@answer.title} by #{@answer.author}" %>
+<div>
+
+<h1>Answer <%=@answer.title%></h1>
+<h2>Enjoy cheating =w=</h2>
+<p>
+<b>
+Author:
+</b>
+<%=@answer.author%>
+
+&nbsp
+
+<b>
+Title:
+</b>
+<%=@answer.title%>
+</p>
+<%=link_to "Click me to download =-=",@answers , :method => :post%>
+<p>Click the link above to download</p>
+
+</div>
+

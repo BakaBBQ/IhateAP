@@ -1,0 +1,50 @@
+class AnswersController < ApplicationController
+	def new
+	end
+
+	def create
+		@answer = Answer.new(params[:answer].permit(:author,:title,:script))
+		uploaded_io = params[:answer][:script]
+		author = params[:answer][:author]
+		title = params[:answer][:title]
+		path = Rails.root.join('public', 'uploads', "#{author}_#{title}_#{uploaded_io.original_filename}")
+		File.open(path, 'w') do |file|
+  			file.write(uploaded_io.read)
+		end
+		@answer.script = path.to_s
+
+		
+		if @answer.save
+			redirect_to @answer
+		else
+			render 'new'
+		end
+	end
+
+	def index
+		@answers = Answer.all
+	end
+
+	def show
+		@answer = Answer.find(params[:id])
+		#send_file @answer.script, :type=>"text/plain" 	
+	end
+
+	#def download
+	#	@answer = Answer.find(params[:id])
+	#	send_file @answer.script, :type=>"text/plain"
+	#end 
+	def download
+		@answer = Answer.find(params[:id])
+		send_file @answer.script, :type=>"text/plain" 
+	end
+
+	private
+  	def answer_params
+   	 params.require(:answer).permit(:author, :title,:script)
+  	end
+
+	
+
+	helper_method :download
+end

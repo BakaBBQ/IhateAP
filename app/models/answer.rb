@@ -1,0 +1,5 @@
+class Answer < ActiveRecord::Base
+validates :author, presence: true
+validates :title, presence: true
+validates :script, presence: true
+end

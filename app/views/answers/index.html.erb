@@ -1,0 +1,42 @@
+<% content_for :title, "List of Answers" %>
+<h1>Answers</h1>
+<h3>Find the answers you want here 0w0</h3>
+
+<table class="zebra">
+
+    <thead>
+
+    <tr>
+
+        <th >Author</th>        
+
+        <th>Title</th>
+
+        <th>Link</th>
+
+
+
+    </tr>
+
+    </thead>
+
+    <tfoot>
+
+    <tr>
+    <% @answers.each do |a|%>
+
+        <td><%= a.author %></td>
+
+
+
+        <td><%= a.title%></td>
+	<td><%= link_to 'Link', a %></td>
+	
+    </tr>
+    <% end %>
+
+
+    
+
+</table>
+
