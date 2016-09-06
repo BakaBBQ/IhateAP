@@ -1,6 +1,8 @@
-== AP Computer Cheater
+== AP Computer Science Code Snippet
 
-A Cheater for AP Computer Science which includes the following features
-	- upload files
-	- download files
+In case you are wondering, this is a code I wrote quite some years ago that shows my frustration of AP CS class,
+to the point I think people are better off uploading code snippets and sharing them.
 
+The code is extremely messy and... I was quite immature at the time. I did have a good experience practicing rails though.
+
+originally named: IhateAP
